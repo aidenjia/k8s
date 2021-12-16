@@ -12,6 +12,6 @@ spec:
   storageClassName: "es-storage-class"
   nfs:
     # real share directory
-    path: /k8s-data/es/es0
+    path: /nfsroot/es/es0
     # nfs real ip
-    server: 10.120.116.240
+    server: 172.17.16.6
