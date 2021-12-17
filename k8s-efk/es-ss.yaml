@@ -105,6 +105,8 @@ spec:
         name: elasticsearch-logging-init
         securityContext:
           privileged: true
+      nodeSelector:
+        es: access
   volumeClaimTemplates:
   - metadata:
       name: elasticsearch-logging
