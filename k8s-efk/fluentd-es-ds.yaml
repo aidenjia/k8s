@@ -97,6 +97,10 @@ spec:
       nodeSelector:
         beta.kubernetes.io/fluentd-ds-ready: "true"
       terminationGracePeriodSeconds: 30
+      tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
+          operator: Exists
       volumes:
       - name: varlog
         hostPath:
